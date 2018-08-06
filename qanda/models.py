@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.urls.base import reverse
 
+
 # Create your models here.
 
 class Question(models.Model):
@@ -18,6 +19,7 @@ class Question(models.Model):
 
     def can_accept_answers(self, user):
         return user == self.user
+
 
 class Answer(models.Model):
     answer = models.TextField()
